@@ -101,7 +101,7 @@
     mask-image:radial-gradient(circle at 50% -5%, #000 0%, transparent 62%);
   }
 
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:32px;padding-right:32px;}
   section{scroll-margin-top:86px;}
 
   .mono{font-family:var(--mono);}
@@ -120,7 +120,7 @@
 
   /* nav */
   header.nav{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:saturate(150%) blur(10px);}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--border);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;border-bottom:1px solid var(--border);}
   .brand{display:inline-flex;align-items:center;gap:10px;}
   .brand .mk{width:24px;height:24px;}
   .brand b{font-weight:600;font-size:15px;letter-spacing:-.01em;}
@@ -145,7 +145,7 @@
   }
 
   /* hero */
-  .hero{padding:54px 0 16px;}
+  .hero{padding-top:54px;padding-bottom:16px;}
   .hgrid{display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:center;}
   .hname{font-weight:600;line-height:.94;letter-spacing:-.04em;margin:0;
     font-size:clamp(2.2rem,5.6vw,4.4rem);color:#fff;}
@@ -180,32 +180,8 @@
     .hinfo .it{border-top:1px solid var(--border);padding:14px 0;}
   }
 
-  /* ---- mobile refinements ---- */
-  @media(max-width:640px){
-    .wrap{padding:0 20px;}
-    .hero{padding:34px 0 8px;}
-    .hgrid{gap:28px;}
-    .hname{font-size:clamp(2.1rem,10vw,2.9rem);letter-spacing:-.03em;}
-    .htag{max-width:none;font-size:1.02rem;margin-top:16px;}
-    .hcta{margin-top:22px;gap:10px;}
-    .hcta .btn{flex:1 1 auto;justify-content:center;padding:13px 16px;}
-    .portrait-card{max-width:none;width:100%;aspect-ratio:4/4.6;margin:0 auto;}
-    .chips{grid-template-columns:repeat(3,1fr);gap:7px;left:10px;right:10px;bottom:10px;}
-    .chip{padding:9px 8px;border-radius:11px;}
-    .chip b{font-size:14px;}
-    .chip span{font-size:9.5px;margin-top:3px;}
-    .sec{padding:46px 0 0;}
-    .sec-top{padding-top:30px;margin-bottom:20px;flex-direction:column;align-items:flex-start;gap:10px;}
-  }
-  @media(max-width:400px){
-    .wrap{padding:0 16px;}
-    .brand b{font-size:13.5px;}
-    .chips{grid-template-columns:1fr 1fr;}
-    .chips .chip:last-child{grid-column:1 / -1;}
-  }
-
   /* section heading */
-  .sec{padding:64px 0 0;}
+  .sec{padding-top:64px;}
   .sec-top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;
     border-top:1px solid var(--border);padding-top:40px;margin-bottom:26px;}
   .sec-top h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;letter-spacing:-.03em;margin:0;color:#fff;}
@@ -343,6 +319,89 @@
     .htag{animation-delay:.08s;} .hcta{animation-delay:.16s;} .hinfo{animation-delay:.24s;} .portrait-card{animation-delay:.12s;}
   }
   @keyframes fadeup{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+  /* ============================================
+     RESPONSIVE / MOBILE
+     Placed last so these rules win the cascade.
+     ============================================ */
+
+  /* Prevent horizontal overflow globally.
+     Grid & flex children default to min-width:auto, which stops them
+     shrinking below their content width (e.g. the non-wrapping code
+     block), stretching the whole page. min-width:0 releases that. */
+  html,body{max-width:100%;overflow-x:hidden;}
+  .hgrid > *, .three > *, .impact > *, .crow > *, .work > *,
+  .hinfo > *, .istats > *, .abnum > *, .chips > *{min-width:0;}
+  .codebox{max-width:100%;}
+
+  @media(max-width:900px){
+    /* Let the code sample wrap instead of forcing page width */
+    .codebox pre{white-space:pre-wrap;word-break:break-word;}
+  }
+
+  @media(max-width:640px){
+    /* longhand only: shorthand `padding` would reset the vertical
+       padding of sections that also carry .wrap (e.g. .hero) */
+    .wrap{padding-left:20px;padding-right:20px;}
+
+    /* nav: keep brand on one line */
+    .nav-in{padding-top:14px;padding-bottom:14px;gap:10px;}
+    .brand{min-width:0;flex:1 1 auto;}
+    .brand b{font-size:13.5px;white-space:nowrap;}
+    .brand b span{display:none;}
+    .nav-actions{flex:0 0 auto;gap:8px;}
+    .nav-actions .btn-white{display:none;}  /* Contact lives in the menu */
+
+    /* hero */
+    .hero{padding-top:34px;padding-bottom:8px;}
+    .hgrid{gap:26px;}
+    .hname{font-size:clamp(2rem,9.5vw,2.85rem);letter-spacing:-.03em;}
+    .htag{max-width:none;font-size:1.02rem;margin-top:16px;}
+    .hcta{margin-top:22px;gap:10px;}
+    .hcta .btn{flex:1 1 100%;justify-content:center;padding:13px 16px;}
+    .hinfo{margin-top:26px;}
+
+    /* portrait */
+    .portrait-card{max-width:none;width:100%;aspect-ratio:4/4.6;margin:0 auto;}
+    .chips{grid-template-columns:repeat(3,1fr);gap:7px;left:10px;right:10px;bottom:10px;}
+    .chip{padding:9px 8px;border-radius:11px;}
+    .chip b{font-size:14px;}
+    .chip span{font-size:9.5px;margin-top:3px;line-height:1.2;}
+
+    /* section headings */
+    .sec{padding-top:44px;}
+    .sec-top{flex-direction:column;align-items:flex-start;gap:10px;
+             padding-top:30px;margin-bottom:20px;}
+    .sec-top p{font-size:14.5px;}
+
+    /* panels & cards */
+    .affil{padding:24px 18px;border-radius:20px;}
+    .logos{gap:12px 20px;margin-top:20px;}
+    .logos .lg{font-size:15px;}
+    .panel{padding:16px;border-radius:16px;}
+    .three{gap:14px;}
+
+    /* impact */
+    .chartcard,.aboutcard{padding:16px;border-radius:16px;}
+    .istats{grid-template-columns:1fr 1fr;gap:10px;}
+    .istat{padding:11px;}
+    .istat .v{font-size:16px;}
+    .abnum{gap:10px;}
+    .abnum .v{font-size:19px;}
+
+    /* contact */
+    .contact-card{padding:26px 18px;border-radius:20px;margin-bottom:38px;}
+    .cbig{font-size:clamp(2.2rem,11vw,3.2rem);}
+    .crow{margin-top:24px;}
+    .crow .cl a.big,.crow .cl .big{font-size:16px;}
+  }
+
+  @media(max-width:400px){
+    .wrap{padding-left:16px;padding-right:16px;}
+    .brand b{font-size:12.5px;}
+    .chips{grid-template-columns:1fr 1fr;}
+    .chips .chip:last-child{grid-column:1 / -1;}
+    .istats{grid-template-columns:1fr;}
+  }
 </style>
 </head>
 <body>
@@ -574,8 +633,7 @@
         <div class="cl">
           <div class="lb">Social</div>
           <div class="socials">
-            <!-- TODO before launch: replace # with your real LinkedIn profile/company page URL -->
-            <a href="#" aria-label="LinkedIn (add URL before launch)" title="Add your LinkedIn URL"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://www.linkedin.com/in/reihaneh-vafaei-323b8223/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
             <a href="mailto:reihaneh.vafaei@vafaei.ai" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.99 5.73a2 2 0 0 1-2.02 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
           </div>
         </div>
