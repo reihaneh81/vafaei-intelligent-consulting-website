@@ -33,10 +33,10 @@
   body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
     background:radial-gradient(900px 520px at 76% -12%, rgba(124,142,196,.13), transparent 60%),
                radial-gradient(680px 460px at 8% -4%, rgba(255,255,255,.05), transparent 55%);}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:32px;padding-right:32px;}
   .mono{font-family:var(--mono);}
   header.nav{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:saturate(150%) blur(10px);}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--border);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;border-bottom:1px solid var(--border);}
   .brand{display:inline-flex;align-items:center;gap:10px;}
   .brand .mk{width:24px;height:24px;}
   .brand b{font-weight:600;font-size:15px;letter-spacing:-.01em;}
@@ -49,12 +49,12 @@
   .btn-white{background:#fff;color:#0a0a0b;border:1px solid rgba(255,255,255,.2);}
   @media(max-width:860px){.nlinks{display:none;}}
 
-  .hero{padding:56px 0 20px;border-bottom:1px solid var(--border);}
+  .hero{padding-top:56px;padding-bottom:20px;border-bottom:1px solid var(--border);}
   .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);}
   h1{font-weight:600;letter-spacing:-.03em;margin:10px 0 0;font-size:clamp(2rem,4.6vw,3.2rem);color:#fff;}
   .lede{margin:14px 0 0;max-width:62ch;font-size:1.1rem;color:var(--t2);}
 
-  main{padding:44px 0 70px;}
+  main{padding-top:44px;padding-bottom:70px;}
   .work{columns:3;column-gap:18px;}
   .wcard{break-inside:avoid;margin-bottom:18px;border:1px solid var(--border);border-radius:18px;overflow:hidden;
     background:var(--surface);transition:border-color .25s,transform .25s;}
@@ -82,6 +82,50 @@
   .backlink{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--t2);margin-bottom:26px;}
   .backlink:hover{color:#fff;}
   .backlink svg{width:15px;height:15px;}
+
+  /* ============================================
+     RESPONSIVE / MOBILE  (placed last: wins cascade)
+     ============================================ */
+  html,body{max-width:100%;overflow-x:hidden;}
+  .layout > *, .work > *, .abnum > *, .side > *{min-width:0;}
+
+  .menu-btn{display:none;width:40px;height:40px;border-radius:999px;border:1px solid var(--border);
+    background:var(--surface);color:#fff;align-items:center;justify-content:center;cursor:pointer;padding:0;}
+  .menu-btn svg{width:18px;height:18px;}
+  .mobile-menu{display:none;margin-top:12px;border:1px solid var(--border);border-radius:18px;
+    background:var(--surface);overflow:hidden;}
+  .mobile-menu a{display:block;padding:13px 18px;font-size:15px;color:var(--t2);border-top:1px solid var(--border);}
+  .mobile-menu a:first-child{border-top:0;}
+  .mobile-menu a.active{color:#fff;}
+
+  @media(max-width:860px){
+    .menu-btn{display:inline-flex;}
+  }
+
+  @media(max-width:640px){
+    /* longhand only: shorthand `padding` would reset vertical padding
+       on sections that also carry .wrap */
+    .wrap{padding-left:20px;padding-right:20px;}
+    .nav-in{padding-top:14px;padding-bottom:14px;gap:10px;}
+    .brand{min-width:0;flex:1 1 auto;}
+    .brand b{font-size:13.5px;white-space:nowrap;}
+    .brand b span{display:none;}
+    .nav-in > .btn-white{display:none;}   /* Contact lives in the menu */
+
+    .hero{padding-top:32px;padding-bottom:16px;}
+    h1{font-size:clamp(1.75rem,7.5vw,2.4rem);}
+    .lede{font-size:1rem;}
+    main{padding-top:30px;padding-bottom:50px;}
+    .layout{gap:26px;}
+    .card{padding:16px;border-radius:14px;}
+    .body p{font-size:15px;}
+  }
+
+  @media(max-width:400px){
+    .wrap{padding-left:16px;padding-right:16px;}
+    .brand b{font-size:12.5px;}
+    .abnum{grid-template-columns:1fr 1fr;}
+  }
 </style>
 </head>
 <body>
@@ -104,6 +148,12 @@
       <a href="index.html#contact">Contact</a>
     </nav>
     <a href="index.html#contact" class="btn btn-white">Get in touch</a>
+    <button class="menu-btn" data-menu aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div class="wrap">
+    <div class="mobile-menu" data-panel><a href="about.html">About</a><a href="work.html" class="active">Work</a><a href="index.html#stack">Stack</a><a href="index.html#impact">Impact</a><a href="index.html#contact">Contact</a></div>
   </div>
 </header>
 
@@ -188,5 +238,14 @@
   </div>
 </main>
 
+
+<script>
+  (function(){
+    var btn=document.querySelector('[data-menu]'), panel=document.querySelector('[data-panel]');
+    if(btn&&panel){btn.addEventListener('click',function(){
+      panel.style.display=(panel.style.display==='block')?'none':'block';
+    });}
+  })();
+</script>
 </body>
 </html>
