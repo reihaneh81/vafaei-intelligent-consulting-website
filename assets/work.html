@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Work — Vafaei Intelligent Consulting</title>
+<meta name="description" content="Selected engagements: agentic AI, RAG, automation, and integration work for fintech and proptech, plus prior work at Viaplay Group." />
+<link rel="canonical" href="https://www.vafaei.ai/work.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0a0a0b" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  :root{
+    --bg:#0a0a0b; --bg-2:#0e0e11; --surface:rgba(255,255,255,.045); --surface-2:rgba(255,255,255,.07);
+    --glass:rgba(255,255,255,.10); --border:rgba(255,255,255,.10); --border-2:rgba(255,255,255,.16);
+    --text:rgba(255,255,255,.92); --t2:rgba(255,255,255,.70); --t3:rgba(255,255,255,.50); --t4:rgba(255,255,255,.38);
+    --sans:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    --max:1200px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:var(--t2);}
+  ::selection{background:#fff;color:#0a0a0b;}
+  :focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:4px;}
+  body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:radial-gradient(900px 520px at 76% -12%, rgba(124,142,196,.13), transparent 60%),
+               radial-gradient(680px 460px at 8% -4%, rgba(255,255,255,.05), transparent 55%);}
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:32px;padding-right:32px;}
+  .mono{font-family:var(--mono);}
+  header.nav{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:saturate(150%) blur(10px);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+  .brand{display:inline-flex;align-items:center;gap:10px;}
+  .brand .mk{width:28px;height:28px;border-radius:50%;flex:0 0 auto;display:block;}
+  .brand b{font-weight:600;font-size:15px;letter-spacing:-.01em;}
+  .brand b span{color:var(--t3);font-weight:400;}
+  .nlinks{display:flex;align-items:center;gap:26px;}
+  .nlinks a{font-size:14px;color:var(--t2);transition:color .2s;}
+  .nlinks a.active{color:#fff;}
+  .nlinks a:hover{color:#fff;}
+  .btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;font-size:14px;font-weight:500;padding:9px 16px;}
+  .btn-white{background:#fff;color:#0a0a0b;border:1px solid rgba(255,255,255,.2);}
+  @media(max-width:860px){.nlinks{display:none;}}
+
+  .hero{padding-top:56px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);}
+  h1{font-weight:600;letter-spacing:-.03em;margin:10px 0 0;font-size:clamp(2rem,4.6vw,3.2rem);color:#fff;}
+  .lede{margin:14px 0 0;max-width:62ch;font-size:1.1rem;color:var(--t2);}
+
+  main{padding-top:44px;padding-bottom:70px;}
+  .work{columns:3;column-gap:18px;}
+  .wcard{break-inside:avoid;margin-bottom:18px;border:1px solid var(--border);border-radius:18px;overflow:hidden;
+    background:var(--surface);transition:border-color .25s,transform .25s;}
+  .wcard:hover{border-color:var(--border-2);transform:translateY(-3px);}
+  .wh{position:relative;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--border);display:flex;align-items:flex-end;padding:14px;}
+  .wh1{background:radial-gradient(130% 130% at 82% 0%,rgba(255,255,255,.12),transparent 56%),var(--bg-2);}
+  .wh2{background:radial-gradient(130% 130% at 20% 0%,rgba(255,255,255,.10),transparent 56%),#0c0c0f;}
+  .wh3{background:radial-gradient(130% 130% at 60% 110%,rgba(255,255,255,.10),transparent 56%),var(--bg-2);}
+  .wh4{background:radial-gradient(130% 130% at 30% 0%,rgba(255,255,255,.09),transparent 56%),#0c0c0f;}
+  .wh5{background:radial-gradient(130% 130% at 78% 100%,rgba(255,255,255,.09),transparent 56%),var(--bg-2);}
+  .mbadge{position:relative;z-index:1;background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border-2);
+    border-radius:11px;padding:8px 12px;}
+  .mbadge b{font-size:16px;font-weight:600;letter-spacing:-.02em;color:#fff;}
+  .mbadge span{display:block;font-size:10.5px;color:var(--t3);margin-top:2px;}
+  .wbody{padding:15px 16px 17px;}
+  .wcat{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--t3);font-family:var(--mono);letter-spacing:.02em;}
+  .wcat svg{width:14px;height:14px;}
+  .wbody h3{margin:9px 0 4px;font-size:15.5px;font-weight:600;letter-spacing:-.01em;color:#fff;}
+  .wbody .wp{font-size:13.5px;color:var(--t2);margin:0 0 13px;line-height:1.5;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;color:var(--t2);
+    background:var(--surface-2);border:1px solid var(--border);border-radius:7px;padding:4px 8px;}
+  @media(max-width:900px){.work{columns:2;}}
+  @media(max-width:600px){.work{columns:1;}}
+  .backlink{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--t2);margin-bottom:26px;}
+  .backlink:hover{color:#fff;}
+  .backlink svg{width:15px;height:15px;}
+
+  /* ============================================
+     RESPONSIVE / MOBILE  (placed last: wins cascade)
+     ============================================ */
+  html,body{max-width:100%;overflow-x:hidden;}
+  .layout > *, .work > *, .abnum > *, .side > *{min-width:0;}
+
+  .menu-btn{display:none;width:40px;height:40px;border-radius:999px;border:1px solid var(--border);
+    background:var(--surface);color:#fff;align-items:center;justify-content:center;cursor:pointer;padding:0;}
+  .menu-btn svg{width:18px;height:18px;}
+  .mobile-menu{display:none;margin-top:12px;border:1px solid var(--border);border-radius:18px;
+    background:var(--surface);overflow:hidden;}
+  .mobile-menu a{display:block;padding:13px 18px;font-size:15px;color:var(--t2);border-top:1px solid var(--border);}
+  .mobile-menu a:first-child{border-top:0;}
+  .mobile-menu a.active{color:#fff;}
+
+  @media(max-width:860px){
+    .menu-btn{display:inline-flex;}
+  }
+
+  @media(max-width:640px){
+    /* longhand only: shorthand `padding` would reset vertical padding
+       on sections that also carry .wrap */
+    .wrap{padding-left:20px;padding-right:20px;}
+    .nav-in{padding-top:14px;padding-bottom:14px;gap:10px;}
+    .brand{min-width:0;flex:1 1 auto;}
+    .brand b{font-size:13.5px;white-space:nowrap;}
+    .nav-in > .btn-white{display:none;}   /* Contact lives in the menu */
+
+    .hero{padding-top:32px;padding-bottom:16px;}
+    h1{font-size:clamp(1.75rem,7.5vw,2.4rem);}
+    .lede{font-size:1rem;}
+    main{padding-top:30px;padding-bottom:50px;}
+    .layout{gap:26px;}
+    .card{padding:16px;border-radius:14px;}
+    .body p{font-size:15px;}
+  }
+
+  @media(max-width:400px){
+    .wrap{padding-left:16px;padding-right:16px;}
+    .brand b{font-size:12.5px;}
+    .abnum{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="mk" src="assets/logo-mark.png" alt="" width="28" height="28" decoding="async" />
+      <b>Vafaei Intelligent Consulting</b>
+    </a>
+    <nav class="nlinks" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="work.html" class="active">Work</a>
+      <a href="index.html#stack">Stack</a>
+      <a href="index.html#impact">Impact</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-white">Get in touch</a>
+    <button class="menu-btn" data-menu aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div class="wrap">
+    <div class="mobile-menu" data-panel><a href="about.html">About</a><a href="work.html" class="active">Work</a><a href="index.html#stack">Stack</a><a href="index.html#impact">Impact</a><a href="index.html#contact">Contact</a></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <span class="eyebrow">Work</span>
+    <h1>Selected work</h1>
+    <p class="lede">Recent engagements with fintech and proptech startups, plus four years driving AI, automation, and integration at Viaplay Group before founding VIC.</p>
+  </section>
+
+  <div class="wrap" style="margin-top:44px;">
+    <a class="backlink" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to home
+    </a>
+    <div class="work">
+      <article class="wcard">
+        <div class="wh wh1">
+          <image-slot id="work-img-1" shape="rect" src="assets/work-agentic-ai.png" placeholder="agentic AI / RAG project shot" style="position:absolute;inset:0;z-index:0;"></image-slot>
+          <div class="mbadge" style="padding:5px 9px;border-radius:9px;"><b style="font-size:13px;">+35% / −50%</b><span style="font-weight:600;color:#fff;font-size:9px;">Retrieval accuracy · search time</span></div>
+        </div>
+        <div class="wbody">
+          <div class="wcat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg> Freelance · 2024–present</div>
+          <h3>Agentic AI &amp; RAG for fintech and proptech</h3>
+          <p class="wp">Designed and optimized RAG pipelines on OpenAI embeddings and PostgreSQL (pgvector), plus document-processing and contract-analysis automation on Azure AI and Copilot Studio.</p>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">pgvector</span><span class="tag">Azure OpenAI</span><span class="tag">Agents</span></div>
+        </div>
+      </article>
+
+      <article class="wcard">
+        <div class="wh wh2">
+          <image-slot id="work-img-2" shape="rect" src="assets/work-finance-automation.png" placeholder="finance automation project shot" style="position:absolute;inset:0;z-index:0;"></image-slot>
+          <div class="mbadge" style="padding:5px 9px;border-radius:9px;"><b style="font-size:13px;">90–95% / −70%</b><span style="font-weight:600;color:#fff;font-size:9px;">Extraction accuracy · time</span></div>
+        </div>
+        <div class="wbody">
+          <div class="wcat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg> Viaplay Group · 2022–2024</div>
+          <h3>AI-driven finance automation at scale</h3>
+          <p class="wp">As Transformation Manager, re-architected a legacy RPA invoice workflow into an AI document platform on Azure AI Document Intelligence and Dynamics 365 Finance, aligned to Microsoft CAF, WAF, and SAF.</p>
+          <div class="tags"><span class="tag">Azure AI</span><span class="tag">Dynamics 365</span><span class="tag">Document AI</span><span class="tag">Architecture</span></div>
+        </div>
+      </article>
+
+      <article class="wcard">
+        <div class="wh wh3">
+          <image-slot id="work-img-3" shape="rect" src="assets/work-enterprise-integration.png" placeholder="enterprise integration project shot" style="position:absolute;inset:0;z-index:0;"></image-slot>
+          <div class="mbadge" style="padding:5px 9px;border-radius:9px;"><b style="font-size:13px;">−50% / +35%</b><span style="font-weight:600;color:#fff;font-size:9px;">Manual reconciliation · consistency</span></div>
+        </div>
+        <div class="wbody">
+          <div class="wcat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg> Viaplay Group · 2019–2021</div>
+          <h3>Enterprise integration across finance &amp; HR</h3>
+          <p class="wp">Designed API-driven integration connecting HR, payroll, and financial systems, and integrated Hogia finance with Cezanne HR for real-time payroll sync using Python, Flask, and webhooks.</p>
+          <div class="tags"><span class="tag">Integration</span><span class="tag">Python</span><span class="tag">APIs</span><span class="tag">Webhooks</span></div>
+        </div>
+      </article>
+
+      <article class="wcard">
+        <div class="wh wh4">
+          <image-slot id="work-img-4" shape="rect" src="assets/work-test-automation.jpg" placeholder="test automation project shot" style="position:absolute;inset:0;z-index:0;"></image-slot>
+          <div class="mbadge" style="padding:5px 9px;border-radius:9px;"><b style="font-size:13px;">+70% / −60%</b><span style="font-weight:600;color:#fff;font-size:9px;">Regression coverage · manual testing</span></div>
+        </div>
+        <div class="wbody">
+          <div class="wcat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Viaplay Group · 2017–2019</div>
+          <h3>Test automation &amp; agile delivery</h3>
+          <p class="wp">Built a Python and Selenium automation framework for Dynamics 365 and HR systems, and led teams as Scrum Master, accelerating sprint delivery ~30% and improving release predictability.</p>
+          <div class="tags"><span class="tag">Test automation</span><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">Agile</span></div>
+        </div>
+      </article>
+
+      <article class="wcard">
+        <div class="wh wh5">
+          <image-slot id="work-img-5" shape="rect" src="assets/work-msc-thesis.png" placeholder="MSc thesis / research project shot" style="position:absolute;inset:0;z-index:0;"></image-slot>
+          <div class="mbadge" style="padding:5px 9px;border-radius:9px;"><b style="font-size:13px;">MSc thesis</b><span style="font-weight:600;color:#fff;font-size:9px;">Real-time aggregation engine</span></div>
+        </div>
+        <div class="wbody">
+          <div class="wcat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> RISE · Chalmers · 2015–2016</div>
+          <h3>Automated monitoring &amp; aggregation</h3>
+          <p class="wp">Built a system that generates aggregation logic in Python and translates configurations into SQL to process monitoring data in real time on PipelineDB, then evaluated its performance.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Real-time</span><span class="tag">Research</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+
+<script>
+  (function(){
+    var btn=document.querySelector('[data-menu]'), panel=document.querySelector('[data-panel]');
+    if(btn&&panel){btn.addEventListener('click',function(){
+      panel.style.display=(panel.style.display==='block')?'none':'block';
+    });}
+  })();
+</script>
+</body>
+</html>
