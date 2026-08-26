@@ -166,10 +166,17 @@
     filter:grayscale(88%) contrast(1.05) brightness(.97);}
   .portrait-card .grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 45%);}
   /* logo-matched duotone: deep teal -> teal -> gold (from VafaeiLogo2) */
-  .portrait-card .colortint{position:absolute;inset:0;mix-blend-mode:color;opacity:.34;
-    background:linear-gradient(155deg,#0E5C68 0%,#1298A4 48%,#F5B663 100%);}
-  .portrait-card .tealwash{position:absolute;inset:0;mix-blend-mode:soft-light;opacity:.42;
-    background:linear-gradient(155deg,#022D34 0%,transparent 58%,rgba(245,182,99,.5) 100%);}
+  /* blend of the original blue->magenta->orange wash with the logo's teal & gold */
+  .portrait-card .colortint{position:absolute;inset:0;mix-blend-mode:color;opacity:.42;
+    background:linear-gradient(155deg,
+      #1298A4 0%,      /* logo teal             */
+      #4E90C4 26%,     /* blue - lighter        */
+      #5B86C8 44%,     /* blue holds longer     */
+      #9B5FA6 66%,     /* original magenta      */
+      #D98A6E 86%,     /* magenta -> warm       */
+      #F5B663 100%);}  /* logo gold             */
+  .portrait-card .tealwash{position:absolute;inset:0;mix-blend-mode:soft-light;opacity:.4;
+    background:linear-gradient(155deg,#022D34 0%,transparent 55%,rgba(245,182,99,.5) 100%);}
   .founder-tag{position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--t2);
     background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--border-2);border-radius:999px;padding:6px 12px;}
   .chips{position:absolute;left:14px;right:14px;bottom:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
