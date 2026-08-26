@@ -158,11 +158,18 @@
   .hinfo .it .s{font-size:12px;color:var(--t3);margin-top:2px;}
 
   /* portrait */
-  .portrait-card{position:relative;aspect-ratio:5/6;border-radius:24px;overflow:hidden;border:1px solid var(--border);
-    background:var(--surface);box-shadow:0 30px 60px -30px rgba(0,0,0,.7);}
+  .portrait-card{position:relative;aspect-ratio:5/6;border-radius:24px;overflow:hidden;
+    border:1px solid rgba(38,186,195,.16);
+    background:linear-gradient(155deg,rgba(2,45,52,.6),var(--surface));
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.7),0 0 0 1px rgba(2,45,52,.4);}
   .portrait-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;
-    filter:grayscale(100%) contrast(1.06) brightness(.96);}
+    filter:grayscale(88%) contrast(1.05) brightness(.97);}
   .portrait-card .grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 45%);}
+  /* logo-matched duotone: deep teal -> teal -> gold (from VafaeiLogo2) */
+  .portrait-card .colortint{position:absolute;inset:0;mix-blend-mode:color;opacity:.34;
+    background:linear-gradient(155deg,#0E5C68 0%,#1298A4 48%,#F5B663 100%);}
+  .portrait-card .tealwash{position:absolute;inset:0;mix-blend-mode:soft-light;opacity:.42;
+    background:linear-gradient(155deg,#022D34 0%,transparent 58%,rgba(245,182,99,.5) 100%);}
   .founder-tag{position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--t2);
     background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--border-2);border-radius:999px;padding:6px 12px;}
   .chips{position:absolute;left:14px;right:14px;bottom:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
@@ -469,7 +476,8 @@
       <div class="portrait-card rv">
         <img src="assets/portrait.jpg" alt="Reihaneh Vafaei, Founder of Vafaei Intelligent Consulting" loading="eager" width="310" height="302" />
         <div class="grad"></div>
-        <div class="colortint" style="position:absolute;inset:0;background:linear-gradient(155deg, oklch(62% .11 250) 0%, oklch(58% .11 340) 55%, oklch(64% .11 40) 100%);mix-blend-mode:color;opacity:.75;"></div>
+        <div class="colortint"></div>
+        <div class="tealwash"></div>
         <div class="chips">
           <div class="chip"><b>90–95%</b><span>doc extraction accuracy</span></div>
           <div class="chip"><b>−70%</b><span>invoice processing time</span></div>
