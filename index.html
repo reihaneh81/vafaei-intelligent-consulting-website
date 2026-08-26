@@ -181,12 +181,21 @@
     background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--border-2);border-radius:999px;padding:6px 12px;}
   .chips{position:absolute;left:14px;right:14px;bottom:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
   .chip{background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--border-2);border-radius:13px;padding:11px 11px;}
+
+  /* circular founder badge (photo composited into the logo mark) */
+  .badge-card{aspect-ratio:auto;border:none;background:none;box-shadow:none;
+    display:flex;flex-direction:column;align-items:center;gap:22px;overflow:visible;}
+  .badge-card img.badge-img{position:static;width:100%;max-width:400px;height:auto;filter:none;
+    border-radius:50%;box-shadow:0 30px 70px -28px rgba(2,45,52,.85);object-fit:initial;inset:auto;}
+  .chips-under{position:static;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:400px;}
+  .chips-under .chip{background:var(--surface-2);border:1px solid var(--border);}
+  .chips-under .chip span{color:var(--t3);}
   .chip b{font-size:17px;font-weight:600;letter-spacing:-.02em;color:#fff;display:block;line-height:1.1;}
   .chip span{display:block;font-size:10.5px;color:var(--t2);margin-top:4px;line-height:1.25;}
 
   @media(max-width:920px){
     .hgrid{grid-template-columns:1fr;gap:34px;}
-    .portrait-card{max-width:440px;aspect-ratio:4/4.4;}
+    .portrait-card:not(.badge-card){max-width:440px;aspect-ratio:4/4.4;}
   }
   @media(max-width:560px){
     .hinfo{grid-template-columns:1fr;gap:0;}
@@ -373,7 +382,8 @@
     .hinfo{margin-top:26px;}
 
     /* portrait */
-    .portrait-card{max-width:none;width:100%;aspect-ratio:4/4.6;margin:0 auto;}
+    .portrait-card:not(.badge-card){max-width:none;width:100%;aspect-ratio:4/4.6;margin:0 auto;}
+    .badge-card img.badge-img{max-width:240px;}
     .chips{grid-template-columns:repeat(3,1fr);gap:7px;left:10px;right:10px;bottom:10px;}
     .chip{padding:9px 8px;border-radius:11px;}
     .chip b{font-size:14px;}
@@ -480,12 +490,9 @@
         </div>
       </div>
 
-      <div class="portrait-card rv">
-        <img src="assets/portrait.jpg" alt="Reihaneh Vafaei, Founder of Vafaei Intelligent Consulting" loading="eager" width="310" height="302" />
-        <div class="grad"></div>
-        <div class="colortint"></div>
-        <div class="tealwash"></div>
-        <div class="chips">
+      <div class="portrait-card rv badge-card">
+        <img class="badge-img" src="assets/founder-badge.png" alt="Reihaneh Vafaei — Founder, Vafaei Intelligent Consulting" loading="eager" width="760" height="760" />
+        <div class="chips chips-under">
           <div class="chip"><b>90–95%</b><span>doc extraction accuracy</span></div>
           <div class="chip"><b>−70%</b><span>invoice processing time</span></div>
           <div class="chip"><b>+35%</b><span>retrieval accuracy</span></div>
