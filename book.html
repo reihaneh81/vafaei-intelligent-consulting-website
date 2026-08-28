@@ -344,7 +344,7 @@
         </div>
         <div class="card">
           <h3>Prefer email?</h3>
-          <p>Reach me directly at <a href="mailto:reihaneh.vafaei@vafaei.ai" style="color:var(--teal);">reihaneh.vafaei@vafaei.ai</a> and I'll get back to you the same way.</p>
+          <p>Reach me directly at <a href="#" class="js-email" data-em="cmVpaGFuZWgudmFmYWVpQHZhZmFlaS5haQ==" style="color:var(--teal);"><span class="js-email-text">email me</span></a> and I'll get back to you the same way.</p>
         </div>
       </div>
     </div>
@@ -369,6 +369,14 @@
     }
     topicInputs.forEach(function(el){el.addEventListener('change',update);});
     update();
+  })();
+  (function(){
+    document.querySelectorAll('.js-email').forEach(function(el){
+      var email=atob(el.getAttribute('data-em'));
+      el.setAttribute('href','mailto:'+email);
+      var t=el.querySelector('.js-email-text');
+      if(t){t.textContent=email;}
+    });
   })();
 </script>
 </body>
