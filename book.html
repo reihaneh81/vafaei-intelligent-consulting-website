@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Book a Call — Vafaei Intelligent Consulting</title>
+<meta name="description" content="Book a call with Vafaei Intelligent Consulting — for AI strategy discussions, defined projects, or ongoing consulting support." />
+<link rel="canonical" href="https://www.vafaei.ai/book.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0a0a0b" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0a0a0b; --bg-2:#0e0e11; --surface:rgba(255,255,255,.045); --surface-2:rgba(255,255,255,.07);
+    --glass:rgba(255,255,255,.10); --border:rgba(255,255,255,.10); --border-2:rgba(255,255,255,.16);
+    --text:rgba(255,255,255,.92); --t2:rgba(255,255,255,.70); --t3:rgba(255,255,255,.50); --t4:rgba(255,255,255,.38);
+    --teal:#26bac3; --teal-d:#1298a4; --gold:#f5b663;
+    --sans:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    --max:1200px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:var(--t2);}
+  ::selection{background:#fff;color:#0a0a0b;}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px;}
+  body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:radial-gradient(900px 520px at 76% -12%, rgba(38,186,195,.10), transparent 60%),
+               radial-gradient(680px 460px at 8% -4%, rgba(255,255,255,.05), transparent 55%);}
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:32px;padding-right:32px;}
+  .mono{font-family:var(--mono);}
+
+  header.nav{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:saturate(150%) blur(10px);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+  .brand{display:inline-flex;align-items:center;gap:10px;min-width:0;}
+  .brand .mk{width:28px;height:28px;border-radius:50%;flex:0 0 auto;display:block;}
+  .brand b{font-weight:600;font-size:15px;letter-spacing:-.01em;white-space:nowrap;}
+  .nlinks{display:flex;align-items:center;gap:26px;}
+  .nlinks a{font-size:14px;color:var(--t2);transition:color .2s;}
+  .nlinks a:hover{color:#fff;}
+  .btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;font-size:14px;font-weight:500;padding:9px 16px;}
+  .btn-white{background:#fff;color:#0a0a0b;border:1px solid rgba(255,255,255,.2);}
+  .menu-btn{display:none;width:40px;height:40px;border-radius:999px;border:1px solid var(--border);
+    background:var(--surface);color:#fff;align-items:center;justify-content:center;cursor:pointer;padding:0;}
+  .menu-btn svg{width:18px;height:18px;}
+  .mobile-menu{display:none;margin-top:12px;border:1px solid var(--border);border-radius:18px;
+    background:var(--surface);overflow:hidden;}
+  .mobile-menu a{display:block;padding:13px 18px;font-size:15px;color:var(--t2);border-top:1px solid var(--border);}
+  .mobile-menu a:first-child{border-top:0;}
+  .mobile-menu a.active{color:#fff;}
+  @media(max-width:860px){.nlinks{display:none;} .menu-btn{display:inline-flex;}}
+
+  @media(max-width:640px){
+    .wrap{padding-left:20px;padding-right:20px;}
+    .nav-in{padding-top:14px;padding-bottom:14px;gap:10px;}
+    .brand{min-width:0;flex:1 1 auto;}
+    .brand b{font-size:13.5px;}
+    .nav-in > .btn-white{display:none;}   /* Contact lives in the menu */
+  }
+
+  .hero{padding-top:52px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);}
+  h1{font-weight:600;letter-spacing:-.03em;margin:10px 0 0;font-size:clamp(1.9rem,4.4vw,2.9rem);color:#fff;}
+  .lede{margin:14px 0 0;max-width:60ch;font-size:1.05rem;color:var(--t2);}
+  .backlink{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--t2);margin-bottom:18px;}
+  .backlink:hover{color:#fff;}
+  .backlink svg{width:15px;height:15px;}
+
+  main{padding-top:44px;padding-bottom:80px;}
+  .formgrid{display:grid;grid-template-columns:1fr 340px;gap:36px;align-items:start;}
+  @media(max-width:900px){.formgrid{grid-template-columns:1fr;}}
+
+  form{border:1px solid var(--border);border-radius:20px;background:var(--surface);padding:28px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:520px){.row2{grid-template-columns:1fr;}}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-size:13.5px;font-weight:500;color:#fff;margin-bottom:8px;}
+  .field label .req{color:var(--gold);margin-left:2px;}
+  .field .hint{display:block;font-size:12px;color:var(--t3);font-weight:400;margin-top:2px;}
+  .field input[type="text"],
+  .field input[type="email"],
+  .field select,
+  .field textarea{
+    width:100%;background:#fff;border:1px solid rgba(255,255,255,.14);border-radius:12px;
+    padding:12px 14px;font-family:var(--sans);font-size:14.5px;color:#111114;
+    transition:border-color .2s,background .2s,box-shadow .2s;
+  }
+  .field input::placeholder,.field textarea::placeholder{color:#8a8a90;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);outline:none;background:#fff;box-shadow:0 0 0 3px rgba(38,186,195,.18);}
+  .field textarea{resize:vertical;min-height:96px;font-family:var(--sans);}
+  .field select{appearance:none;-webkit-appearance:none;color:#111114;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;}
+  .field select option{background:#fff;color:#111114;}
+
+  .topics{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media(max-width:640px){.topics{grid-template-columns:1fr;}}
+  .topic{position:relative;display:flex;flex-direction:column;gap:4px;border:1px solid rgba(255,255,255,.14);border-radius:14px;
+    padding:14px 16px 14px 40px;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s;background:#fff;}
+  .topic:hover{border-color:var(--teal);}
+  .topic input{position:absolute;left:16px;top:16px;accent-color:var(--teal-d);width:15px;height:15px;margin:0;}
+  .topic-t{font-size:14px;font-weight:600;color:#111114;line-height:1.3;}
+  .topic-d{font-size:12.5px;color:#5c5c62;line-height:1.45;}
+  .topic:has(input:checked){border-color:var(--teal);background:#eaf9fa;box-shadow:0 0 0 3px rgba(38,186,195,.14);}
+
+  .topics-1col{grid-template-columns:1fr;}
+  .topic-sm{flex-direction:row;align-items:center;padding:11px 14px 11px 40px;gap:0;}
+  .topic-sm .topic-t{font-size:13.5px;font-weight:500;}
+  .topic-sm input{top:50%;transform:translateY(-50%);}
+
+  .goals{display:flex;flex-direction:column;gap:9px;}
+  .goal{position:relative;display:flex;align-items:center;border:1px solid rgba(255,255,255,.14);border-radius:12px;
+    padding:11px 14px 11px 40px;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s;background:#fff;}
+  .goal:hover{border-color:var(--teal);}
+  .goal input{position:absolute;left:14px;top:50%;transform:translateY(-50%);accent-color:var(--teal-d);width:15px;height:15px;margin:0;}
+  .goal span{font-size:13.5px;color:#3a3a40;}
+  .goal input:checked ~ span{color:#111114;font-weight:500;}
+  .goal:has(input:checked){border-color:var(--teal);background:#eaf9fa;box-shadow:0 0 0 3px rgba(38,186,195,.14);}
+
+  .submit-row{margin-top:6px;}
+  .submitbtn{width:100%;justify-content:center;padding:14px 20px;font-size:15px;font-weight:600;
+    background:#fff;color:#0a0a0b;border:none;border-radius:999px;cursor:pointer;transition:transform .15s,opacity .15s;}
+  .submitbtn:hover{opacity:.92;}
+  .submitbtn:active{transform:scale(.98);}
+  .formnote{margin-top:12px;font-size:12px;color:var(--t3);text-align:center;}
+
+  .side{display:flex;flex-direction:column;gap:16px;position:sticky;top:96px;}
+  .card{border:1px solid var(--border);border-radius:16px;background:var(--surface);padding:18px;}
+  .card h3{margin:0 0 10px;font-size:13px;font-weight:600;color:#fff;letter-spacing:-.01em;}
+  .card p{margin:0;font-size:13px;color:var(--t2);line-height:1.6;}
+  .steps{display:flex;flex-direction:column;gap:12px;margin-top:2px;}
+  .step{display:flex;gap:10px;align-items:flex-start;}
+  .stepnum{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:rgba(38,186,195,.14);
+    border:1px solid rgba(38,186,195,.35);color:var(--teal);font-family:var(--mono);font-size:11px;
+    display:flex;align-items:center;justify-content:center;}
+  .step p{font-size:12.5px;color:var(--t2);margin:0;line-height:1.5;}
+
+  @media(max-width:640px){
+    .wrap{padding-left:20px;padding-right:20px;}
+    form{padding:20px;border-radius:16px;}
+    .side{position:static;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="mk" src="assets/logo-mark.png" alt="" width="28" height="28" decoding="async" />
+      <b>Vafaei Intelligent Consulting</b>
+    </a>
+    <nav class="nlinks" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="index.html#stack">Stack</a>
+      <a href="index.html#impact">Impact</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-white">Get in touch</a>
+    <button class="menu-btn" data-menu aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div class="wrap">
+    <div class="mobile-menu" data-panel>
+      <a href="about.html">About</a><a href="work.html">Work</a><a href="index.html#stack">Stack</a><a href="index.html#impact">Impact</a><a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <span class="eyebrow">Book a Call</span>
+    <h1>Let's discuss your AI initiative.</h1>
+    <p class="lede">Whether you're exploring an AI opportunity, planning a transformation, or looking for support on a specific project, let's talk about your goals, challenges, and what you need to achieve.</p>
+  </section>
+
+  <div class="wrap" style="margin-top:36px;">
+    <a class="backlink" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to home
+    </a>
+
+    <div class="formgrid">
+      <!--
+        FORM SUBMISSION SETUP REQUIRED:
+        This form posts to Formspree (https://formspree.io), a free service that
+        forwards submissions to your email — needed because GitHub Pages can't run
+        server-side code to process forms itself.
+
+        1. Go to formspree.io, sign up free, create a new form.
+        2. Copy the form endpoint they give you (looks like
+           https://formspree.io/f/abcdwxyz).
+        3. Replace YOUR_FORM_ID below with that ID.
+      -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New consultation booking — vafaei.ai" />
+
+        <div class="field">
+          <label>What brings you here?<span class="req">*</span></label>
+          <div class="topics" id="topic-group">
+            <label class="topic">
+              <input type="radio" name="Topic" value="Explore an AI opportunity" required />
+              <span class="topic-t">Explore an AI opportunity</span>
+              <span class="topic-d">I want to understand how AI could create value for my organization.</span>
+            </label>
+            <label class="topic">
+              <input type="radio" name="Topic" value="Plan an AI transformation" />
+              <span class="topic-t">Plan an AI transformation</span>
+              <span class="topic-d">We need help defining priorities, roadmap, and approach.</span>
+            </label>
+            <label class="topic">
+              <input type="radio" name="Topic" value="Transform or automate a business process" />
+              <span class="topic-t">Transform or automate a business process</span>
+              <span class="topic-d">We have a process we'd like to improve, automate, or scale.</span>
+            </label>
+            <label class="topic">
+              <input type="radio" name="Topic" value="Discuss a specific AI project" data-reveals-project />
+              <span class="topic-t">Discuss a specific AI project</span>
+              <span class="topic-d">We have a defined project and are looking for consulting or delivery support.</span>
+            </label>
+            <label class="topic">
+              <input type="radio" name="Topic" value="Explore ongoing consulting support" />
+              <span class="topic-t">Explore ongoing consulting support</span>
+              <span class="topic-d">We're looking for expertise over a longer period or across multiple initiatives.</span>
+            </label>
+            <label class="topic">
+              <input type="radio" name="Topic" value="Something else" />
+              <span class="topic-t">Something else</span>
+              <span class="topic-d">I'd like to discuss a different need.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field" id="general-block">
+          <label for="challenge">Tell me about your challenge or opportunity</label>
+          <span class="hint" style="display:block;margin-bottom:8px;">What are you trying to improve, build, automate or achieve? Share a few details so I can make our conversation as useful as possible.</span>
+          <textarea id="challenge" name="Challenge or Opportunity" placeholder="Your message"></textarea>
+        </div>
+
+        <div id="project-block" style="display:none;">
+          <div class="field">
+            <label for="project-desc">Tell me about the project</label>
+            <span class="hint" style="display:block;margin-bottom:8px;">What are you looking to build, improve, integrate, or automate?</span>
+            <textarea id="project-desc" name="Project Description" placeholder="Your message"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Expected project timeline</label>
+            <div class="topics topics-1col">
+              <label class="topic topic-sm"><input type="radio" name="Project Timeline" value="Less than 1 month" /><span class="topic-t">Less than 1 month</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Project Timeline" value="1–3 months" /><span class="topic-t">1–3 months</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Project Timeline" value="3–6 months" /><span class="topic-t">3–6 months</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Project Timeline" value="6+ months" /><span class="topic-t">6+ months</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Project Timeline" value="Not decided yet" /><span class="topic-t">Not decided yet</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Where are you currently?</label>
+            <div class="topics topics-1col">
+              <label class="topic topic-sm"><input type="radio" name="Current Stage" value="Exploring / requirements" /><span class="topic-t">Exploring / requirements</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Current Stage" value="Strategy & planning" /><span class="topic-t">Strategy &amp; planning</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Current Stage" value="Architecture / design" /><span class="topic-t">Architecture / design</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Current Stage" value="Proof of concept" /><span class="topic-t">Proof of concept</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Current Stage" value="Development / implementation" /><span class="topic-t">Development / implementation</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Current Stage" value="Existing solution that needs improvement or scaling" /><span class="topic-t">Existing solution that needs improvement or scaling</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>What kind of support are you looking for?</label>
+            <div class="topics topics-1col">
+              <label class="topic topic-sm"><input type="radio" name="Support Type" value="Advisory / consulting" /><span class="topic-t">Advisory / consulting</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Support Type" value="Architecture & solution design" /><span class="topic-t">Architecture &amp; solution design</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Support Type" value="Development / engineering" /><span class="topic-t">Development / engineering</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Support Type" value="Automation & integration" /><span class="topic-t">Automation &amp; integration</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Support Type" value="End-to-end delivery" /><span class="topic-t">End-to-end delivery</span></label>
+              <label class="topic topic-sm"><input type="radio" name="Support Type" value="Ongoing support" /><span class="topic-t">Ongoing support</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom:8px;">
+          <label style="margin-bottom:2px;">Your details</label>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="name">Name<span class="req">*</span></label>
+            <input type="text" id="name" name="Name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Work email<span class="req">*</span></label>
+            <input type="email" id="email" name="Work Email" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="Company" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="title">Job title</label>
+            <input type="text" id="title" name="Job Title" autocomplete="organization-title" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone <span class="hint" style="display:inline;">(optional)</span></label>
+          <input type="text" id="phone" name="Phone" autocomplete="tel" />
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="submitbtn">Book a Consultation</button>
+          <p class="formnote"><b style="color:var(--t2);">Have a specific project in mind?</b> You can share the details when booking, and we'll use the call to discuss scope, goals, timeline and the best way to work together.</p>
+        </div>
+      </form>
+
+      <div class="side">
+        <div class="card">
+          <h3>What happens next</h3>
+          <div class="steps">
+            <div class="step">
+              <span class="stepnum">1</span>
+              <p>You submit this form — takes about 2 minutes.</p>
+            </div>
+            <div class="step">
+              <span class="stepnum">2</span>
+              <p>I review it and reply by email with a few time slots.</p>
+            </div>
+            <div class="step">
+              <span class="stepnum">3</span>
+              <p>We have a focused 30-minute call about your situation, not a sales pitch.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Prefer email?</h3>
+          <p>Reach me directly at <a href="mailto:reihaneh.vafaei@vafaei.ai" style="color:var(--teal);">reihaneh.vafaei@vafaei.ai</a> and I'll get back to you the same way.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function(){
+    var btn=document.querySelector('[data-menu]'), panel=document.querySelector('[data-panel]');
+    if(btn&&panel){btn.addEventListener('click',function(){
+      panel.style.display=(panel.style.display==='block')?'none':'block';
+    });}
+  })();
+  (function(){
+    var topicInputs=document.querySelectorAll('#topic-group input[name="Topic"]');
+    var projectBlock=document.getElementById('project-block');
+    var generalBlock=document.getElementById('general-block');
+    function update(){
+      var isProject=document.querySelector('#topic-group input[data-reveals-project]:checked');
+      projectBlock.style.display=isProject?'block':'none';
+      generalBlock.style.display=isProject?'none':'block';
+    }
+    topicInputs.forEach(function(el){el.addEventListener('change',update);});
+    update();
+  })();
+</script>
+</body>
+</html>
