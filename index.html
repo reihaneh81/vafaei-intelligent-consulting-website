@@ -49,7 +49,6 @@
     "addressLocality": "Stockholm",
     "addressCountry": "SE"
   },
-  "email": "reihaneh.vafaei@vafaei.ai",
   "areaServed": "Global (remote & on-site)",
   "knowsAbout": ["Agentic AI", "Retrieval-Augmented Generation", "AI automation", "Enterprise integration", "Document intelligence"]
 }
@@ -320,6 +319,7 @@
   .cbig span{color:var(--t3);}
   .crow{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;}
   .crow-2{grid-template-columns:repeat(2,1fr);max-width:560px;}
+  .crow-1{grid-template-columns:1fr;max-width:320px;}
   .crow .cl{border-top:1px solid var(--border);padding-top:16px;}
   .crow .cl .lb{font-size:12.5px;color:var(--t3);}
   .crow .cl a.big,.crow .cl .big{display:inline-flex;align-items:center;gap:10px;margin-top:8px;font-size:18px;font-weight:500;color:#fff;letter-spacing:-.01em;word-break:break-word;}
@@ -471,7 +471,8 @@
         <p class="htag">Vafaei Intelligent Consulting takes agentic AI, automation, and integration from idea to production for fintech and proptech teams that need it governed, reliable, and shipped, not hyped.</p>
         <div class="hcta">
           <a href="work.html" class="btn btn-white">View work <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-          <a href="#" class="btn btn-glass js-email" data-em="cmVpaGFuZWgudmFmYWVpQHZhZmFlaS5haQ=="><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.99 5.73a2 2 0 0 1-2.02 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> <span class="js-email-text">Email me</span></a>
+          <a href="#" class="btn btn-glass js-email" data-em="cmVpaGFuZWgudmFmYWVpQHZhZmFlaS5haQ=="><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.99 5.73a2 2 0 0 1-2.02 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+          <a href="book.html" class="btn btn-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg> Book a call</a>
           <span class="availpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M20 10c0 5-8 12-8 12s-8-7-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><b>Stockholm, Sweden</b></span>
         </div>
         <div class="hinfo">
@@ -642,11 +643,7 @@
     <div class="contact-card">
       <div class="glow"></div>
       <h2 class="cbig">Let's build <span>with AI.</span></h2>
-      <div class="crow crow-2">
-        <div class="cl">
-          <div class="lb">Email</div>
-          <a class="big js-email" href="#" data-em="cmVpaGFuZWgudmFmYWVpQHZhZmFlaS5haQ=="><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.99 5.73a2 2 0 0 1-2.02 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> <span class="js-email-text">Email me</span></a>
-        </div>
+      <div class="crow crow-1">
         <div class="cl">
           <div class="lb">Social</div>
           <div class="socials">
@@ -690,13 +687,11 @@
     document.querySelectorAll('.rv').forEach(function(e){io.observe(e);});
   })();
   (function(){
-    // Decode email addresses at runtime so they never sit in the page
-    // source as plain text for scrapers to harvest.
+    // Build mailto links at runtime. The address is only ever stored
+    // Base64-encoded in the markup and is never rendered as visible text,
+    // so scrapers reading the raw HTML never see it.
     document.querySelectorAll('.js-email').forEach(function(el){
-      var email=atob(el.getAttribute('data-em'));
-      el.setAttribute('href','mailto:'+email);
-      var t=el.querySelector('.js-email-text');
-      if(t){t.textContent=email;}
+      el.setAttribute('href','mailto:'+atob(el.getAttribute('data-em')));
     });
   })();
 </script>
